@@ -1,4 +1,3 @@
--- For SQL Server
 CREATE DATABASE barbershop_db;
 GO
 
@@ -99,4 +98,5 @@ INSERT INTO users (role_id, email, password_hash, full_name, phone) VALUES
 INSERT INTO services (name, description, duration_minutes, price) VALUES
 ('Standard Haircut', 'Classic haircut with clippers and scissors', 30, 15.00),
 ('Beard Trim', 'Precision beard shaping', 20, 8.00),
+
 ('Full Grooming', 'Haircut + beard + styling', 60, 40.00);
