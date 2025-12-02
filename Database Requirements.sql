@@ -23,7 +23,6 @@ CREATE TABLE users (
   FOREIGN KEY (role_id) REFERENCES roles(id)
 );
 
--- Add trigger for updated_at in SQL Server
 GO
 CREATE TRIGGER trg_users_update
 ON users
@@ -65,7 +64,6 @@ CREATE TABLE appointments (
 CREATE INDEX idx_barber_time ON appointments(barber_id, start_at, end_at);
 GO
 
--- Trigger for appointments updated_at
 CREATE TRIGGER trg_appointments_update
 ON appointments
 AFTER UPDATE
@@ -89,7 +87,6 @@ CREATE TABLE payments (
   FOREIGN KEY (appointment_id) REFERENCES appointments(id) ON DELETE CASCADE
 );
 
--- Sample data
 INSERT INTO users (role_id, email, password_hash, full_name, phone) VALUES
 (3, 'admin@barber.com', '$2y$10$REPLACE_WITH_HASH', 'Admin User', '+000000'),
 (2, 'barber1@barber.com', '$2y$10$REPLACE_WITH_HASH', 'Barber One', '+000001'),
@@ -100,4 +97,5 @@ INSERT INTO services (name, description, duration_minutes, price) VALUES
 ('Beard Trim', 'Precision beard shaping', 20, 8.00),
 
 ('Full Grooming', 'Haircut + beard + styling', 60, 40.00);
+
 
