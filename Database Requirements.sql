@@ -100,3 +100,4 @@ INSERT INTO services (name, description, duration_minutes, price) VALUES
 ('Beard Trim', 'Precision beard shaping', 20, 8.00),
 
 ('Full Grooming', 'Haircut + beard + styling', 60, 40.00);
+
