@@ -52,4 +52,5 @@ $appts = $stmt->fetchAll();  // Store today's appointments in an array
     <p><a href="index.php">Back to site</a></p>  <!-- Link back to main site -->
   </div>
 </body>
-</html>
+
+</html
