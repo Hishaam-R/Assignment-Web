@@ -1,0 +1,153 @@
+:root{
+  /* Define main color variables and container width */
+  --bg:#0b0b0b;                  /* Background black */
+  --panel:#111;                   /* Panel dark background */
+  --muted:#888;                   /* Muted text color */
+  --gold:#d4b45c;                 /* Gold accent color */
+  --white:#fff;                   /* White color */
+  --container-width:1000px;       /* Max width for main container */
+}
+
+/* Apply border-box to all elements */
+*{box-sizing:border-box}
+
+/* Body styling */
+body{
+  margin:0;                        /* Remove default margin */
+  font-family:system-ui,Segoe UI,Arial; /* System font fallback */
+  background:linear-gradient(180deg,#0b0b0b, #131313 60%); /* Gradient background */
+  color:var(--white);              /* Default text color */
+}
+
+/* Main container */
+.container{
+  width:90%;                       /* 90% of viewport width */
+  max-width:var(--container-width); /* Max width from variable */
+  margin:0 auto;                   /* Center horizontally */
+  padding:24px;                    /* Inner spacing */
+}
+
+/* Header styling */
+.site-header{
+  background:transparent;          /* Transparent header */
+  padding:20px 0;
+  color:var(--white);
+}
+
+/* Logo styling */
+.logo{
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+/* Navigation links */
+nav a{
+  color:var(--muted);              /* Muted link color */
+  text-decoration:none;            /* Remove underline */
+  margin-right:10px;               /* Space between links */
+}
+
+/* Hero section */
+.hero{
+  padding:40px 0;
+  text-align:center;
+}
+.hero h2{
+  font-size:42px;
+  margin:0 0 8px;
+}
+
+/* Services section */
+.services{
+  padding:20px 0;
+}
+
+/* Cards container */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;                        /* Space between cards */
+}
+
+/* Individual service card */
+.service-card{
+  background:rgba(255,255,255,0.03); /* Slightly transparent panel */
+  padding:16px;
+  border-radius:8px;
+  flex:1 1 260px;                  /* Flexible width with minimum */
+  min-width:240px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.4); /* Soft shadow */
+}
+.service-card h3{
+  color:var(--gold);               /* Gold heading */
+  margin-top:0;
+}
+.desc{color:var(--muted);}         /* Description text muted */
+.meta{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  background:var(--gold);
+  padding:8px 12px;
+  border-radius:6px;
+  color:#000;
+  text-decoration:none;
+  margin-top:8px;
+}
+
+/* Authentication forms */
+.auth{
+  max-width:480px;
+  margin:40px auto;
+  background:transparent;
+  padding:20px;
+  border-radius:8px;
+}
+
+/* Input fields styling */
+input[type="text"], input[type="email"], input[type="password"], input[type="datetime-local"]{
+  width:100%;                      /* Full width */
+  padding:8px;
+  margin:8px 0;
+  border-radius:4px;
+  border:1px solid #222;
+  background:#111;
+  color:var(--white);
+}
+
+/* General buttons */
+button{
+  background:var(--gold);
+  color:#000;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Error message styling */
+.error{
+  background:#2b0000;
+  color:#ffb3b3;
+  padding:8px;
+  border-radius:4px;
+}
+
+/* Success message styling */
+.success{
+  background:#0a3b0a;
+  color:#bff0bf;
+  padding:8px;
+  border-radius:4px;
+}
+
+/* Footer styling */
+.site-footer{
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
+}
