@@ -1,6 +1,6 @@
 <?php
 require 'backend_db.php';  
-// Load database connection + start session if backend_db.php handles sessions
+// Load database connection + start session if backend_db.php handles sessions,
 
 // Check if user is logged in and is an admin
 if (empty($_SESSION['user']) || $_SESSION['user']['role_name'] !== 'admin') {
